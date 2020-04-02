@@ -41,10 +41,14 @@ class ArtistsController < ApplicationController
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
   end
+  def display_artist
+  end
 
   private
 
   def artist_params
     params.require(:artist).permit(:name)
   end
+
+  
 end
